@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 
 export default makeStyles(() => ({
   root: {
@@ -9,7 +9,7 @@ export default makeStyles(() => ({
     height: '70px',
   },
   content: {
-    flexGrow: 1,
+    flexGrow: '1',
     padding: '2em',
     width: '100%',
   },
