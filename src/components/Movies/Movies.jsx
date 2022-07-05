@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Box, CircularProgress, useMediaQuery, Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
-import { MoviesList } from '../index';
-import { selectGenreOrCategory } from '../../features/currentGenreOrCategory';
+import { MoviesList, Pagination, FeaturedMovie } from '../index';
 
 import { useGetMoviesQuery } from '../../services/TMDB';
 
@@ -10,6 +9,9 @@ const Movies = () => {
   const [page, setPage] = useState(1);
   const { genreIdOrCategoryName, searchQuery } = useSelector((state) => state.currentGenreOrCategory);
   const { data, error, isFetching } = useGetMoviesQuery({ genreIdOrCategoryName, page, searchQuery });
+  const lg = useMediaQuery((theme) => theme.breakpoints.only('lg'));
+
+  const numberOfMovies = lg ? 17 : 19;
 
   if (isFetching) {
     return (
@@ -35,7 +37,10 @@ const Movies = () => {
 
   return (
     <div>
-      <MoviesList movies={data} />
+      <FeaturedMovie movie={data.results[0]} />
+      <Pagination page={page} setPage={setPage} totalPages={data.total_pages} />
+      <MoviesList movies={data} numberOfMovies={numberOfMovies} excludeFirst />
+      <Pagination page={page} setPage={setPage} totalPages={data.total_pages} />
     </div>
   );
 };
