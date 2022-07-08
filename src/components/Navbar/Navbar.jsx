@@ -51,13 +51,13 @@ const Navbar = () => {
               color="inherit"
               edge="start"
               style={{ outline: 'none' }}
-              onClick={() => setMobileOpen((previousValue) => !previousValue)}
+              onClick={() => setMobileOpen((prevMobileOpen) => !prevMobileOpen)}
               className={classes.menuButton}
             >
               <Menu />
             </IconButton>
           )}
-          <IconButton color="inherit" sx={{ ml: 10 }} onClick={colorMode.toggleColorMode}>
+          <IconButton color="inherit" sx={{ ml: 1 }} onClick={colorMode.toggleColorMode}>
             {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
           </IconButton>
           {!isMobile && <Search />}
@@ -67,7 +67,13 @@ const Navbar = () => {
                 Login &nbsp; <AccountCircle />
               </Button>
             ) : (
-              <Button color="inherit" component={Link} to={`/profile/${user.id}`} className={classes.linkButton} onClick={() => {}}>
+              <Button
+                color="inherit"
+                component={Link}
+                to={`/profile/${user.id}`}
+                className={classes.linkButton}
+                onClick={() => {}}
+              >
                 {!isMobile && <>My Movies &nbsp;</>}
                 <Avatar
                   style={{ width: 30, height: 30 }}
@@ -87,19 +93,14 @@ const Navbar = () => {
               variant="temporary"
               anchor="right"
               open={mobileOpen}
-              onClose={() => setMobileOpen((previousValue) => !previousValue)}
-              className={classes.drawerBackground}
+              onClose={() => setMobileOpen((prevMobileOpen) => !prevMobileOpen)}
               classes={{ paper: classes.drawerPaper }}
               ModalProps={{ keepMounted: true }}
             >
               <Sidebar setMobileOpen={setMobileOpen} />
             </Drawer>
           ) : (
-            <Drawer
-              classes={{ paper: classes.drawerPaper }}
-              variant="permanent"
-              open
-            >
+            <Drawer classes={{ paper: classes.drawerPaper }} variant="permanent" open>
               <Sidebar setMobileOpen={setMobileOpen} />
             </Drawer>
           )}
