@@ -1,5 +1,5 @@
 # Movie App
-## [Live 🎥](https://movie-app-iota-sage.vercel.app/)
+## [Demo 🎥](https://movie-app-iota-sage.vercel.app/)
 
 ## This app allows you to search for:
 - Searching movies that interest you
@@ -9,11 +9,11 @@
 
 ## Used Technologies
 - [React](https://pl.reactjs.org/)
-- Redux
-- Material UI
-- React Router DOM
-- TMDB API
-- Alan AI
+- [Redux]([https://pl.reactjs.org/](https://redux.js.org/))
+- [Material UI](https://mui.com/)
+- [React Router DOM](https://v5.reactrouter.com/web/guides/quick-start)
+- [TMDB API](https://developers.themoviedb.org/3)
+- [Alan AI](https://alan.app/)
 
 ### Installation
 
