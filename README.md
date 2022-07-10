@@ -9,7 +9,7 @@
 
 ## Used Technologies
 - [React](https://pl.reactjs.org/)
-- [Redux]([https://pl.reactjs.org/](https://redux.js.org/))
+- [Redux](https://pl.reactjs.org/](https://redux.js.org/)
 - [Material UI](https://mui.com/)
 - [React Router DOM](https://v5.reactrouter.com/web/guides/quick-start)
 - [TMDB API](https://developers.themoviedb.org/3)
