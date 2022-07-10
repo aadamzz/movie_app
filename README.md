@@ -2,7 +2,7 @@
 ## [Demo 🎥](https://movie-app-iota-sage.vercel.app/)
 
 ## This app allows you to search for:
-- Searching movies that interest you
+- Searching for movies that interest you
 - Login, save and add to watchlist movies
 - Browse movies filtered by genre
 - Do all those functionalities with voice assistant Alan AI 
